@@ -17,3 +17,10 @@ in IntelliJ: SPRING_PROFILES_ACTIVE=default in Run Configuration -> "Environment
 in IntalliJ: prod in Run Configuration -> "Active profiles"
 JVM parameter: java -jar -Dspring.profiles.active=prod eazybank-0.0.1-SNAPSHOT.jar
 OS: export spring_profiles_active=dev (SPRING_PROFILES_ACTIVE=dev)
+
+Environment variable has priority over a property in application.properties
+
+## Profile based Authentication Providers
+When profile "default" is active using IntelliJ environment setting, any password is accepted during login.
+When profile "prod" is active (by changing or deleting the environment variable), we must provide the correct password. 
+
